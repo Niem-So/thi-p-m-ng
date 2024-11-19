@@ -1,0 +1,96 @@
+/* Thêm nền hoa */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background-flowers.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Tấm thiệp */
+  .card {
+    position: relative;
+    width: 500px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Nền trắng hơi trong suốt */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .card h1 {
+    font-size: 24px;
+    color: #005f73;
+    margin-bottom: 10px;
+  }
+  
+  .card h1 span {
+    color: #0096c7;
+    font-weight: bold;
+  }
+  
+  .card h2 {
+    font-size: 40px;
+    color: #ee6c4d;
+    margin: 10px 0;
+    animation: zoomIn 2s ease-in-out infinite;
+  }
+  
+  .card p {
+    font-size: 16px;
+    color: #344e41;
+    margin-top: 10px;
+    animation: fadeInUp 2s ease forwards;
+  }
+  
+  /* Hiệu ứng động nhẹ cho hoa */
+  .flowers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('flowers.png') no-repeat center;
+    background-size: cover;
+    opacity: 0.2;
+    animation: float 6s infinite linear;
+  }
+  
+  /* Hiệu ứng động */
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes zoomIn {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
